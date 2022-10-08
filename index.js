@@ -4,7 +4,6 @@ let sideBar = document.querySelector(".sidebar");
 
 let count = 0;
 
-prompt(window.innerWidth)
 if(window.innerWidth < 500){
     sidebarlogo.addEventListener("click",function(){
         if(count == 0){
