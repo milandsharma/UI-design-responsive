@@ -23,6 +23,9 @@ body {
   text-align: center;
   margin-top:10vh
 }
+.sidebar:hover{
+  width:16vw;
+}
 .header{
   width:14vw;
   height: 8vh;
@@ -41,7 +44,7 @@ body {
 .dashboard{
   display: block; 
   width:14vw;
-  height: 10%;
+  height: 9%;
   overflow: hidden;
   text-align: left;
   margin: 0 auto;
@@ -90,7 +93,7 @@ height:35%
   font-size: 1em;
 }
 .pages span{
-  height:8vh;
+  height:7vh;
   font-size: .9em;
   display: flex;
   flex-direction: row;
@@ -114,9 +117,7 @@ height:35%
 .pages p:hover{
   color: rgb(250, 249, 252);
 }
-.sidebar:hover{
-  width: 16vw;
-}
+
 
 
 
@@ -130,6 +131,7 @@ height:35%
   height: 10vh;
   background-color: #f5f8fa;
   position:fixed;
+
   top: 0;
   z-index: 10;
 }
@@ -140,25 +142,28 @@ nav {
   align-items: center;
   padding: 0 4%;
   height: 100%;
+  padding: 0;
+  width: 90%;
 }
 .nav-left,.nav-right {
   display: flex;
   flex-direction: row;
   align-items: center;
   height: 100%;
-  width: 38%;
+  width: 30%;
   display: flex;
   align-items: center;
   justify-content: space-evenly;
 }
 .nav-left{
-  margin-left: 5%;
+  margin-left: 4%;
+  display: flex;
 }
 .nav-right {
   width: 25%;
 }
 .nav-left span {
-  font-size: 0.89em;
+  font-size: 1.1em;
   color: rgb(61, 61, 61);
   display: flex;
   align-items: center;
@@ -168,7 +173,8 @@ nav {
   padding: 0 5%;
   border-radius: 5px;
   cursor: pointer;
-  margin-left: 3%;
+  font-weight: 600;
+  margin-left:3.2%;
 }
 .nav-left span:hover {
   background-color: rgba(224, 220, 220, 0.2);
@@ -177,7 +183,7 @@ nav {
   background-color: rgba(224, 220, 220, 0.2);
 }
 .nav-right span {
-  font-size: 0.89em;
+  font-size: 1.1em;
   color: rgb(61, 61, 61);
   display: flex;
   align-items: center;
@@ -188,6 +194,8 @@ nav {
   border-radius: 5px;
   cursor: pointer;
   margin-left: 3%;
+  font-weight: 600;
+
 }
 .project {
   display: flex;
@@ -220,8 +228,9 @@ nav {
 .project-right span {
     display: flex;
     align-items: center;
-    width: 32%;
+    width: 25%;
     height: 4vh;
+    font-size: .8em;
     cursor: pointer;
     color:  rgb(61, 61, 61);
     padding: 0 5%;
@@ -803,28 +812,60 @@ align-items: center;
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media screen and (max-width:600px){
+  body{
+    background-color: rgb(236, 232, 232);
+  }
   .sidebar{
     visibility:hidden;
-    width:45%
+    width:48%;
+    margin-top:5vh
   }
   .header{
-    font-size: .8em;
-    width: 90%;
+    font-size: .7em;
+    width: 80%;
     overflow: hidden;
     display: flex;
     flex-direction: row;
+    align-items: center;
     justify-content: space-evenly;
     margin-top: 2vh auto;
+    font-size: .6em;
+    margin-left: 8%;
   }
   .dashboard{
-    width: 80%;
-    height: 30vh;
+    width: 75%;
+    height: 35%;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 1vh auto;
+    margin: 2vh 5%;
     overflow: hidden;
+    margin-bottom:1vh;
+  }
+  .dashboard h3{
+    font-size: .7em;
+    margin: 0 2%;
+  }
+  .dashboard i{
+    font-size: 1.5em;
   }
   .dashboard span{
     width: 100%;
@@ -839,10 +880,13 @@ align-items: center;
     justify-content: space-evenly;
     font-size: 1em;
   }
+  .pages h3{
+    display:block;
+  }
   .pages span{
-    width: 100%;
-    height: 10%;
-    font-size: 1em;
+    width: 80%;
+    height: 8%;
+    font-size: .9em;
   }
   .pages p{
     width: 50%;
@@ -859,40 +903,76 @@ align-items: center;
     background-color: rgb(255, 255, 255);
     padding: 0 5%;
   }
-  .nav-right{
-    display: none;
-  }
-  .nav-left{
-    width: 80%;
-    height: 15vh;
-    font-size: 1em;
+  .nav{
+    padding: 0;
+    width: 100%;
+    height: 7vh;
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
-    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
   }
-  .nav-left span{
-    width:10%
-  }
-  .project{
-    width: 80%;
+  nav{
+    width: 100%;
     height: 100%;
+    padding: 0;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
     align-items: center;
+    margin: 0 auto;
+  }
+  .nav-right{
+    display: none;
+  }
+  .nav-left{
+    width: 90%;
+    height: 15vh;
+    font-size: .8em;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
+  }
+  .nav-left span{
+    width:31%;
+    padding: 0;
+    margin:0 1%;
+  }
+
+
+  .project{
+    width: 85%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     font-size: .9em;
   }
   .project-left{
-    width: 45%;
+    width: 60%;
   }
   .project-right{
-    width: 55%;
+    width: 45%;
     font-size: .75em;
-    font-weight: 600;
+    font-weight: 400;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+  .project-right span{
+    width: 45%;
+    font-size: .8em;
+    padding: 0;
+    text-align: center;
+  
+  }
+  .project-right span p{
+    margin: auto;
   }
   .content{
-    width: 80%;
+    width: 92%;
     margin: auto;
     height: 100%;
     display: flex;
@@ -903,15 +983,16 @@ align-items: center;
   .first-content{
     flex-direction: column;
     width: 100%;
-    margin-bottom: 60%;
+    margin-bottom: 62vh;
   }
   .first-content .left{
     flex-direction: column;
     width: 100%; 
+    margin-bottom: 5vh;
   }
   .card{
-    width:32vw;
-    height: 22vh;
+    width:36vw;
+    height: 30vh;
     font-size: .72em;
     font-weight: 600;
   }
@@ -919,15 +1000,16 @@ align-items: center;
     width: 100%;
   }
   .Profile{
-    width: 60px;
-    height:20px;
+    width: 5vw;
+    height:3vh;
   }
   .first-content .right{
     flex-direction: column;
-    width: 100%;
+    width: 92%;
     height:100%;    
     font-size: .9em;
     padding: 2%;
+    margin: auto;
   }
   .partTwo{
     height: 13%;
@@ -986,7 +1068,7 @@ align-items: center;
     align-items: center;
   }
   .btn span{
-    width: 40%;
+    width: 45%;
     height: 70%;
     display: flex;
     flex-direction: row;
@@ -996,6 +1078,7 @@ align-items: center;
     cursor: pointer;
     background-color:rgba(86, 246, 86, 0.745) ;
     font-weight: 600;
+    font-size: .8em;
   }
   .report{
     width: 30%;
