@@ -2,7 +2,8 @@
 let sidebarlogo = document.querySelector(".sidebarlogo");
 let sideBar = document.querySelector(".sidebar");
 let page = document.querySelector(".pages h3");
-
+let dashboard_nav_card = document.querySelector(".dashboard-nav-card");
+let dashboard_card = document.querySelector(".dashboard-card");
 let count = 0;
 
 if(window.innerWidth <= 600){
@@ -37,6 +38,27 @@ if(window.innerWidth <= 600){
         }
     });
 }
+
+
+dashboard_nav_card.addEventListener("mouseover",()=>{
+    dashboard_card.style.display = "block";
+});
+dashboard_nav_card.addEventListener("mouseout",()=>{
+    dashboard_card.style.display = "none";
+});
+dashboard_card.addEventListener("mouseover",()=>{
+    dashboard_card.style.display = "block";
+});
+dashboard_card.addEventListener("mouseout",()=>{
+    dashboard_card.style.display = "none";
+}
+);
+
+
+
+
+
+
 if(sideBar.style.width <= "8vw" || sideBar.style.width == "5%"){
     page.style.display = "none";
 }else{
